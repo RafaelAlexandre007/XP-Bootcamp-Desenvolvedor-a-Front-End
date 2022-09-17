@@ -1,15 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { ContactsService } from '../contacts.service';
 
 @Component({
   selector: 'app-contact-create',
   templateUrl: './contact-create.component.html',
   styleUrls: ['./contact-create.component.css']
 })
-export class ContactCreateComponent implements OnInit {
+export class ContactCreateComponent{
 
-  constructor() { }
+  constructor(private contacsService: ContactsService, private router: Router) { }
 
-  ngOnInit(): void {
+  createContact(): void{
+
+    this.router.navigate(['/contacts'])
   }
-
 }
