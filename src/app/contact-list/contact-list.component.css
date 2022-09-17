@@ -1,5 +1,10 @@
-.create{
+.create {
   position: fixed;
   bottom: 16px;
   right: 16px;
+}
+
+:host {
+  display: block;
+  padding-bottom: 80px;
 }
